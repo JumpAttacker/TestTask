@@ -6,7 +6,7 @@ namespace App.Task1
     public class OfficerBuilder : IOfficerBuilder
     {
         private List<Officer> Officers { get; } = new();
-        
+
         public List<Officer> Build()
         {
             var flatList = Officers.FlatToHierarchy();

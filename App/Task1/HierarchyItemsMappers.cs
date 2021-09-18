@@ -18,13 +18,13 @@ namespace App.Task1
 
             return result;
         }
-        
+
         public static Officer FlatToHierarchy(this IEnumerable<Officer> list)
         {
             var lookup = list
                 .Select(category => new Officer(category.Id)
                 {
-                    ParentId = category.ParentId,
+                    ParentId = category.ParentId
                 })
                 .ToLookup(category => category.ParentId);
 
@@ -33,7 +33,7 @@ namespace App.Task1
 
             var newList = new Officer(-1)
             {
-                Children = lookup[0].ToList(),
+                Children = lookup[0].ToList()
             };
 
             return newList;

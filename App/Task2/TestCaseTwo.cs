@@ -17,10 +17,7 @@ namespace App.Task2
         public bool Validate(int target)
         {
             var sort = _list.OrderBy(i => i).ToArray();
-            if (sort.All(z => z > target))
-            {
-                return false;
-            }
+            if (sort.All(z => z > target)) return false;
 
             for (var i = 0; i < sort.Length; i++)
             {
@@ -29,10 +26,7 @@ namespace App.Task2
                 ;
                 for (var i2 = 0; i2 < sort.Length; i2++)
                 {
-                    if (i == i2)
-                    {
-                        continue;
-                    }
+                    if (i == i2) continue;
 
                     sum -= sort[i2];
                     _stepManager.Add(sort[i2]);

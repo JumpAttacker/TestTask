@@ -8,8 +8,8 @@ namespace Task2
 {
     public class Task1Tests
     {
-        private IReferenceManager _referenceManager;
         private OutputFormatter _formatter;
+        private IReferenceManager _referenceManager;
 
         [SetUp]
         public void Setup()

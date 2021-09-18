@@ -8,6 +8,7 @@ namespace App.Task1
         {
             Id = id;
         }
+
         public int Id { get; set; }
         public int ParentId { get; set; }
         public List<Officer> Children { get; set; } = new();
